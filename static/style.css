@@ -1,0 +1,127 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transform: scale; /* Zoom tampilan */
+    transform-origin: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+
+.translator-box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background: white;
+    padding: 80px; /* Tambah padding biar lebih luas */
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 160%;
+    height: 510px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.box {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+textarea {
+    width: 105%;
+    height: 400px; /* Lebih tinggi */
+    margin-top: 10px;
+    padding: 25px 30px 40px 30px; /* Lebih lega */
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 18px; /* Lebih besar */
+    resize: none;
+    box-sizing: border-box 80px;
+}
+
+select {
+    font-size: 16px;
+    padding: 8px;
+    margin-bottom: 5px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 12px 20px;
+    border: none;
+    background: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#switch-btn {
+    background: #ff9800;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    padding: 7px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 0 20px;
+    transition: background 0.3s ease;
+}
+
+#switch-btn:hover {
+    background: #e68900;
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+    body {
+        transform: none; /* Hapus zoom di mobile biar gak kekecilan */
+    }
+
+    .translator-box {
+        flex-direction: column;
+        gap: 15px;
+        padding: 25px;
+    }
+
+    .box {
+        width: 100%;
+    }
+
+    #switch-btn {
+        margin: 10px 0;
+        width: auto;
+    }
+}
+
+#variation-btn {
+    background: #28a745; /* Hijau */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#variation-btn:hover {
+    background: #218838; /* Hijau lebih gelap saat hover */
+}

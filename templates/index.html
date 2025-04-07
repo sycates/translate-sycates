@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penerjemah Gaul</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Translate By Sycates</h1>
+        <div class="translator-box">
+            <div class="box">
+                <select id="source-lang"></select>
+                <textarea id="input-text" placeholder="Masukkan teks..."></textarea>
+                <button onclick="copyText('input-text')">Salin</button>
+            </div>
+            <button id="switch-btn" onclick="switchLanguages()">SWITCH</button>
+            <div class="box">
+                <select id="target-lang"></select>
+                <textarea id="output-text" readonly></textarea>
+                <button onclick="copyText('output-text')">Salin</button>
+            </div>
+        </div>
+        <button id="translate-btn" onclick="translateText()">Terjemahkan</button>
+        <div id="variation-container">
+            <button id="variation-btn">Variations</button>
+            <div id="variation-options" style="display: none;">
+                <button onclick="getVariation('Casual')">Casual</button>
+                <button onclick="getVariation('Formal')">Formal</button>
+                <button onclick="getVariation('Professional')">Professional</button>
+            </div>
+        </div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
